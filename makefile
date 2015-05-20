@@ -28,6 +28,9 @@ run4:
 run5:
 	./$(EXE_NAME) -p joku
 
+run6:
+	./$(EXE_NAME) -a joku
+
 rb: clean all
 
 b: clean all run
@@ -40,3 +43,4 @@ b4: clean all run4
 
 b5: clean all run5
 
+b6: clean all run6

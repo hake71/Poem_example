@@ -13,6 +13,8 @@
 void loadPoems(void);
 void printPoem(char * poem_name);
 void printPoemList(void);
+void AddPoem(char * poem_name);
+
 
 #endif
 /* End Of File */

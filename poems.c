@@ -77,5 +77,34 @@ void printPoemList(void){
 	} /* While() */
 
 }
+/* *********************************
+  ** Add new poem   ****
+  ********************************** */
+char Poem_line[MAX_LINE_LENGTH];
+
+
+void AddPoem(char * poem_name){
+	char Poem_continue;
+	/* Open file for writing */
+//	file = fopen("poems.txt","a");
+	Poem_continue = 1;
+	printf(" Enter new poem \"%s\", write \"end\" to finish poem  \n", poem_name);
+	do{
+		char loppu_merkki;
+		scanf("%s", Poem_line);
+	//	scanf("%79[^\r\n]", Poem_line);
+
+		if(strncmp(Poem_line,"end",strlen("end")) == 0){
+			Poem_continue = 0;
+		}
+		
+		printf("%s ", Poem_line);
+
+	}while(Poem_continue);
+//fprintf(fp, "This is testing...\n");
+		printf(" DONE!");
+
+
+}
 
 /* End of file */

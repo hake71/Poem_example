@@ -21,9 +21,18 @@ int main(int argc, char *argv[]){
 		printf("-l list :all poems in application.");
 		return 0;
 	}
-    
-	loadPoems();
-    
+  /* Add poem */
+	if(strcmp(argv[1],"-a") == 0){
+		if(3 > argc){
+			printf("The name of the poem must be also given!\n");
+			return 0;
+		}
+		else{
+			AddPoem(argv[2]);
+		}
+	}else{
+		loadPoems();
+  }
 	if(strcmp(argv[1],"-p") == 0){
 		if(3 > argc){
 			printf("The name of the poem must be also given!\n");
